@@ -1,0 +1,18 @@
+{% extends "index.html" %}
+{% load static %} 
+
+{% block content %}
+<div class="posters_list">
+  {% for item in item_list %}
+    <div class="card"> 
+      <div class="img-frame">
+        <img src="/static/images/upload/{{ item.poster }}" class="card-img-top" alt="...">
+      </div> 
+      <div class="card-body">
+        <h5 class="card-title">{{ item.title }}</h5>
+        <a href="{% url 'buying_ticket_page_url' title=item.title %}" class="btn btn-primary card-btn">Купить билет</a>
+      </div>
+    </div>
+  {% endfor %}
+</div>
+{% endblock %}
