@@ -24,17 +24,15 @@ footer {
 .footer {
     margin-top: auto;
 }
-/*
-.footer-col {
-    margin: 0 0;
-}
-*/
 .footer-company-name,
 .footer-text {
     font-size:  75%;;
 }
 .footer-company-name {
     margin: 8% 0;
+}
+.container {
+    margin: 0 0 20px;
 }
 .navbar {
     height: 30px;
@@ -82,24 +80,21 @@ li {
     justify-content: flex-start;
 }
 .card {
-    width: 10rem; 
-    height: 15rem;
-    margin: 10px;
+    width: 12rem; 
+    height: 23rem;
+    margin: 12px;
 }
 .card-body {
     padding: 5px;
 }
-.img-frame {
-    width: 100px;
-    height: 162px;
-}
 .card-title {
    font-size:80%; 
-   text-align: center;
 }
 .card-btn {
     font-size: 10px;
-    margin: 0 30px;
+    margin: 0 45px;
+    background-color: #54d734;
+    color: white;
 }
 
 /* buying_ticket_page */
@@ -113,9 +108,15 @@ li {
     text-align: center;
 }
 .additional_image {
-    width:200%;
+    width:100%;
 }
 .text {
     text-align: left;
     font-size: 80%;    
+}
+.buying_ticket_btn {
+    width: 170px;
+    font-size: 15px;
+    background-color: #54d734;
+    color: white;  
 }
