@@ -13,6 +13,20 @@ body {
     text-align: center;
     color: white;
 }
+.user-name,
+.auth-logout,
+.auth-login,
+.auth-signup {
+    position: fixed;
+}
+.user-name,
+.auth-login{
+    margin: 5px 15px;
+}
+.auth-logout,
+.auth-signup {
+    margin: 5px 70px;    
+}
 header{
     background-color: blue;
 }
@@ -26,7 +40,7 @@ footer {
 }
 .footer-company-name,
 .footer-text {
-    font-size:  75%;;
+    font-size:  75%;
 }
 .footer-company-name {
     margin: 8% 0;
@@ -61,7 +75,7 @@ li {
     width: 150px;
 }
 .pay_icon_g {
-    width: 135px;;
+    width: 135px;
 }
 .social_icons_fb {
     width: 46px;
@@ -71,6 +85,12 @@ li {
 }
 .title {
     text-align: center;
+}
+a {
+    text-decoration: none;
+}
+a, a:hover {
+    color: black;
 }
 
 /* home_page */

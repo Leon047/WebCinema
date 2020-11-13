@@ -12,15 +12,23 @@
   <body style="background-image: url({% static '/images/img/avengers.jpgp' %});">
     <div class="page">
       <header class="header">
+        {% if user.is_authenticated %}
+          <span class="user-name">({{ user.username }})</span>
+          <a class="auth-logout" href="{% url 'account_logout' %}">Выход</a>
+        {% else %}
+          <a class="auth-login" href="{% url 'account_login' %}">Вход</a>
+          <a class="auth-signup" href="{% url 'account_signup' %}">Регистрация</a>
+        {% endif %}
+
         <p class="header_text">Покупайте электронные билеты и обходите очереди на кассах!</p>
         <p class="header_text">ОТПРАВЛЯЙТЕСЬ СРАЗУ В ЗАЛ!</p>
       </header>
       <div class="container">
         <div class="row">
-          <div class=".col-2">
+          <div class=".col-mb-2">
              <h1 class="cinema_stiker"> #Вкино</h1>
           </div>
-          <div class=".col-10">
+          <div class=".col-md-10">
             <div class="row">
               <div class=".col m-3">
                 <form class="form-inline">
@@ -93,20 +101,20 @@
             </div>
             <div class=".col"> 
               <ul>
-                <li><h5 href="#">Афиша</h5></li>
-                <li><p class="footer-text" href="#">Расписание</p></li>
-                <li><p class="footer-text" href="#">Скоро в прокате</p></li>
-                <li><p class="footer-text" href="#">Кинотеатры</p></li>
-                <li><p class="footer-text" href="#">Акции</p></li>
+                <li><a href="#"><h5>Афиша</h5></a></li>
+                <li><a class="footer-text" href="#">Расписание</a></li>
+                <li><a class="footer-text" href="#">Скоро в прокате</a></li>
+                <li><a class="footer-text" href="#">Кинотеатры</a></li>
+                <li><a class="footer-text" href="#">Акции</a></li>
               </ul>
             </div>
             <div class=".col">               
               <ul>
-                <li><h5 href="#">О кинотеатре</h5></li>
-                <li><p class="footer-text" href="#">Новости</p></li>
-                <li><p class="footer-text" href="#">Реклама</p></li>
-                <li><p class="footer-text" href="#">Кафе-бар</p></li>
-                <li><p class="footer-text" href="#">Контакты</p></li>
+                <li><a href="#"><h5>О кинотеатре</h5></a></li>
+                <li><a class="footer-text" href="#">Новости</a></li>
+                <li><a class="footer-text" href="#">Реклама</a></li>
+                <li><a class="footer-text" href="#">Кафе-бар</a></li>
+                <li><a class="footer-text" href="#">Контакты</a></li>
               </ul>
             </div>
             <div class=".col ml-4"> 
