@@ -1,17 +1,17 @@
 from django.shortcuts import render
-# from django.views.generic import ListView
+from django.views.generic import ListView, View
 
 from .models import MovieDescription
 
 
-# class HomeList(ListView):
-#     queryset = MovieDescription.objects.all()
-#     template_name = 'ticket_shop/home_page.html'
+class HomePageList(ListView):
+    model = MovieDescription
+    queryset = MovieDescription.objects.all()
+    template_name= 'ticket_shop/home_page.html'
 
-def home_page(request):
-    item_list = MovieDescription.objects.all()
-    return render(request, 'ticket_shop/home_page.html', {'item_list': item_list})
 
-def buying_ticket_page(request, title):
-    item = MovieDescription.objects.get(title__iexact=title)
-    return render(request, 'ticket_shop/buying_ticket_page.html', {'item': item})
+class BuyingTicketPage(View):
+
+    def get(self, request, title):
+        item = MovieDescription.objects.get(title__iexact=title)
+        return render(request, 'ticket_shop/buying_ticket_page.html', {'item': item})

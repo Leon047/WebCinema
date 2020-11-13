@@ -1,9 +1,10 @@
 """WebCinema URL Configuration"""
 from django.urls import path
 
-from .views import *
+from .views import HomePageList, BuyingTicketPage
 
 urlpatterns = [
-    path('', home_page, name='home_page_url'),
-    path('buying_ticket_page/<str:title>/', buying_ticket_page, name='buying_ticket_page_url'),
+    path('', HomePageList.as_view(), name='home_page_url'),
+    path('buying_ticket_page/<str:title>/', BuyingTicketPage.as_view(),
+         name='buying_ticket_page_url'),
 ]
