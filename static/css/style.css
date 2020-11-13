@@ -17,7 +17,7 @@ body {
 .auth-logout,
 .auth-login,
 .auth-signup {
-    position: fixed;
+    position: absolute;
 }
 .user-name,
 .auth-login{
@@ -115,6 +115,10 @@ a, a:hover {
     margin: 0 45px;
     background-color: #54d734;
     color: white;
+}
+.home-pay-icons {
+    position: absolute;
+    margin: -50px 12px; 
 }
 
 /* buying_ticket_page */
