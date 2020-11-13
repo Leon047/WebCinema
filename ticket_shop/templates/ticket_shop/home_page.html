@@ -28,29 +28,26 @@
       <span class="sr-only">Next</span>
     </a>
 </div>
-
 <div class="home-pay-icons">
-  <a href="#"><img class="pay_icon_g" src="{% static '/images/img/google-play.png' %}" alt="Google play"></a>
-  <a href="#"><img class="pay_icon_a" src="{% static '/images/img/apple-store.png' %}" alt="App Store"></a>
+  <a href="#"><img class="pay_icon_home" src="{% static '/images/img/google-play.png' %}" alt="Google play"></a>
+  <a href="#"><img class="pay_icon_home" src="{% static '/images/img/apple-store.png' %}" alt="App Store"></a>
 </div>
-
 <h4 class="title">Смотрите сегодня, 24 июля</h4>
-<div class="posters_list">
+<div class="row align-items stretch posters_list">
   {% for item in object_list %}
-
-    <div class="card"> 
-      <img src="/static/images/upload/{{ item.poster }}" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">{{ item.title }}</h5>
-        <a href="{% url 'buying_ticket_page_url' title=item.title %}" class="btn card-btn">Купить билет</a>
+    <div class="col-6 col-md-3">
+      <div class="card"> 
+        <img src="/static/images/upload/{{ item.poster }}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{ item.title }}</h5>
+          <a href="{% url 'buying_ticket_page_url' title=item.title %}" class="btn card-btn">Купить билет</a>
+        </div>
       </div>
     </div>
-
   {% endfor %}
 </div>
 <div>
   <h4 class="title">Смотрите скоро</h4>
-
 </div>
 <div>
   <h4 class="title">Новости и Акции</h4>

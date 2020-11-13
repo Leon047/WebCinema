@@ -10,32 +10,38 @@
     <title>ticketshop</title>
   </head>
   <body style="background-image: url({% static '/images/img/avengers.jpg' %});">
-    <div class="page">
-      <header class="header">
-        {% if user.is_authenticated %}
-          <span class="user-name">({{ user.username }})</span>
-          <a class="auth-logout" href="{% url 'account_logout' %}">Выход</a>
-        {% else %}
-          <a class="auth-login" href="{% url 'account_login' %}">Вход</a>
-          <a class="auth-signup" href="{% url 'account_signup' %}">Регистрация</a>
-        {% endif %}
-        <p class="header_text">Покупайте электронные билеты и обходите очереди на кассах!</p>
-        <p class="header_text">ОТПРАВЛЯЙТЕСЬ СРАЗУ В ЗАЛ!</p>
-      </header>
+    <header class="header">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            {% if user.is_authenticated %}
+              <span class="user-name">({{ user.username }})</span>
+              <a class="auth-logout" href="{% url 'account_logout' %}">Выход</a>
+            {% else %}
+              <a class="auth-login" href="{% url 'account_login' %}">Вход</a>
+              <a class="auth-signup" href="{% url 'account_signup' %}">Регистрация</a>
+            {% endif %}
+            <p class="header_text">Покупайте электронные билеты и обходите очереди на кассах!</p>
+            <p class="header_text">ОТПРАВЛЯЙТЕСЬ СРАЗУ В ЗАЛ!</p>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="container">
       <main class="main">
         <div class="container">
           <div class="row">
-            <div class="col-mb-2">
+            <div class="col-md-2 col-cinema_stiker">
                <h1 class="cinema_stiker"> #Вкино</h1>
             </div>
             <div class="col-md-10">
-              <div class="row">
-                <div class="col m-3 head-sarch-bur">
+              <div class="row" style="padding-bottom: 10px;">
+                <div class="col-4 head-sarch-bur">
                   <form class="form-inline">
                     <input class="form-control mr-sm-2" type="search" placeholder="Поиск" aria-label="Search">
                   </form>
                 </div>
-                <div class="col m-2 heaad-social_icons">
+                <div class="col-4 heaad-social_icons">
                   <div class="heaad-social">
                     <a href="#"><img class="social_icons_fb" src="{% static '/images/img/facebook-new.png' %}" alt="#"></a>
                     <a href="#"><img class="social_icons" src="{% static '/images/img/twiter-blue-icon.png' %}" alt=""></a>
@@ -43,7 +49,7 @@
                     <a href="#"><img class="social_icons" src="{% static '/images/img/odnoklassniki_icon.png' %}" alt=""></a>
                   </div>
                 </div>
-                <div class="col m-2 head-nambers">
+                <div class="col-4 head-nambers">
                    <h5>(048) 777-77-77</h5>
                    <h5>(097) 777-77-77</h5>
                 </div>
@@ -97,13 +103,19 @@
         <hr class="strip">
         <div class="container m-5"> 
           <div class="row">
-            <div class="col footer-col">
+            <div class="col-3 footer-col">
               <h5>Мобильные приложения</h5>
-              <a href="#"><img class="pay_icon_g" src="{% static '/images/img/google-play.png' %}" alt="Google play"></a>
-              <a href="#"><img class="pay_icon_a" src="{% static '/images/img/apple-store.png' %}" alt="App Store"></a>
+              <div class="row">
+                <div class="col-6 pay-icon-col">
+                  <a href="#"><img class="pay_icon_g" src="{% static '/images/img/google-play.png' %}" alt="Google play"></a>
+                </div>
+                <div class="col-6 pay-icon-col">
+                  <a href="#"><img class="pay_icon_a" src="{% static '/images/img/apple-store.png' %}" alt="App Store"></a>
+                </div>
+              </div>
               <p class="footer-company-name">Разработка сайтов: AVADA-MEDIA</p>
             </div>
-            <div class="col"> 
+            <div class="col-3"> 
               <ul>
                 <li><a href="#"><h5>Афиша</h5></a></li>
                 <li><a class="footer-text" href="#">Расписание</a></li>
@@ -112,7 +124,7 @@
                 <li><a class="footer-text" href="#">Акции</a></li>
               </ul>
             </div>
-            <div class="col">               
+            <div class="col-3">               
               <ul>
                 <li><a href="#"><h5>О кинотеатре</h5></a></li>
                 <li><a class="footer-text" href="#">Новости</a></li>
@@ -121,7 +133,7 @@
                 <li><a class="footer-text" href="#">Контакты</a></li>
               </ul>
             </div>
-            <div class="col ml-4"> 
+            <div class="col-3"> 
               <a href="#"><img class="social_icons_fb" src="{% static '/images/img/facebook-new.png' %}" alt="#"></a>
               <a href="#"><img class="social_icons" src="{% static '/images/img/twiter-blue-icon.png' %}" alt=""></a>
               <a href="#"><img class="social_icons" src="{% static '/images/img/vkontakte_PNG11.png' %}" alt=""></a>

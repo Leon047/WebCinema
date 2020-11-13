@@ -1,10 +1,15 @@
 /* index */
 body {
-    margin: 0 200px;
-    height:2000px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: flex;
     background-size: contain;
     background-repeat: repeat-y;
     background-position: top center;
+}
+.main{
+    margin: 0 auto;
 }
 .title {
     margin: 2%; 
@@ -39,6 +44,11 @@ footer {
     padding: auto;
     width: 100%;
 }
+.col-cinema_stiker {
+    align-items: flex-end;
+    display: flex;
+    justify-content: flex-end;
+}
 .footer {
     margin-top: auto;
     background-color: white;
@@ -64,7 +74,7 @@ footer {
 .cinema_stiker{
     background: black;
     color: white;
-    margin: 60px 0 0;
+    margin: 0;
     width: 150px;
     height: 52px;
 }
@@ -76,11 +86,16 @@ li {
     background-color: black;
     width: 100%;
 }
-.pay_icon_a {
-    width: 150px;
-}
+.pay_icon_a,
 .pay_icon_g {
-    width: 135px;
+    width: 100%;
+}
+.pay_icon_home {
+    width: 130px;
+}
+.pay-icon-col {
+    padding-left: 2px;
+    padding-right: 2px;
 }
 .social_icons_fb {
     width: 46px;
@@ -108,10 +123,10 @@ a, a:hover {
     display: flex;
     align-items: flex-end;
 }
-
 .heaad-social, 
 .content {
     background-color: white;
+    position: relative;
 }
 
 /* home_page */
@@ -121,9 +136,8 @@ a, a:hover {
     justify-content: flex-start;
 }
 .card {
-    width: 12rem; 
-    height: 23rem;
-    margin: 12px;
+    margin: 5px;
+    padding: 5px;
 }
 .card-body {
     padding: 5px;
@@ -138,8 +152,12 @@ a, a:hover {
     color: white;
 }
 .home-pay-icons {
+    z-index: 9999;
     position: absolute;
-    margin: -50px 12px; 
+    right: 0;
+    margin: 20px;
+    width: fit-content;
+    margin-top: -50px;
 }
 
 /* buying_ticket_page */
