@@ -1,0 +1,22 @@
+version: '3'
+services:
+
+  db:
+    image: postgres:latest
+    restart: always
+    ports:
+        - "5432:5432"
+    environment:
+      POSTGRES_USER: 'root'
+      POSTGRES_PASSWORD: '12345'
+      POSTGRES_DB: 'webcinema'
+
+  app:
+    build: .
+    volumes:
+        - .:/app
+    ports:
+        - "8000:8000"
+    command: python manage.py runserver 0.0.0.0:8000 
+    depends_on:
+      - db
