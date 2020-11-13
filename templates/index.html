@@ -9,7 +9,7 @@
     <link rel="stylesheet" href={% static "css/style.css" %}>
     <title>ticketshop</title>
   </head>
-  <body style="background-image: url({% static '/images/img/avengers.jpgp' %});">
+  <body style="background-image: url({% static '/images/img/avengers.jpg' %});">
     <div class="page">
       <header class="header">
         {% if user.is_authenticated %}
@@ -19,87 +19,91 @@
           <a class="auth-login" href="{% url 'account_login' %}">Вход</a>
           <a class="auth-signup" href="{% url 'account_signup' %}">Регистрация</a>
         {% endif %}
-
         <p class="header_text">Покупайте электронные билеты и обходите очереди на кассах!</p>
         <p class="header_text">ОТПРАВЛЯЙТЕСЬ СРАЗУ В ЗАЛ!</p>
       </header>
-      <div class="container">
-        <div class="row">
-          <div class=".col-mb-2">
-             <h1 class="cinema_stiker"> #Вкино</h1>
-          </div>
-          <div class=".col-md-10">
-            <div class="row">
-              <div class=".col m-3">
-                <form class="form-inline">
-                  <input class="form-control mr-sm-2" type="search" placeholder="Поиск" aria-label="Search">
-                </form>
-              </div>
-              <div class=".col m-2">
-                <a href="#"><img class="social_icons_fb" src="{% static '/images/img/facebook-new.png' %}" alt="#"></a>
-                <a href="#"><img class="social_icons" src="{% static '/images/img/twiter-blue-icon.png' %}" alt=""></a>
-                <a href="#"><img class="social_icons" src="{% static '/images/img/vkontakte_PNG11.png' %}" alt=""></a>
-                <a href="#"><img class="social_icons" src="{% static '/images/img/odnoklassniki_icon.png' %}" alt=""></a>
-              </div>
-              <div class=".col m-2">
-                 <h5>(048) 777-77-77</h5>
-                 <h5>(097) 777-77-77</h5>
-              </div>
+      <main class="main">
+        <div class="container">
+          <div class="row">
+            <div class="col-mb-2">
+               <h1 class="cinema_stiker"> #Вкино</h1>
             </div>
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav">
-                  <li class="nav-item active">
-                    <a class="nav-link" href="{% url 'home_page_url' %}">Афиша<span class="sr-only">(current)</span></a>
-                  </li>
-                  <li class="nav-item active">
-                    <a class="nav-link" href="#">Расписание</a>
-                  </li>
-                  <li class="nav-item active">
-                    <a class="nav-link" href="#">Скоро</a>
-                  </li>
-                  <li class="nav-item active">
-                    <a class="nav-link" href="#">Кинотеатры</a>
-                  </li>
-                  <li class="nav-item active">
-                    <a class="nav-link" href="#">Акции</a>
-                  </li>
-                  <li class="nav-item dropdown active">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      О кинотеатре
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                      <a class="dropdown-item" href="#">Новости</a>
-                      <a class="dropdown-item" href="#">Реклама</a>
-                      <a class="dropdown-item" href="#">Кафе</a>
-                      <a class="dropdown-item" href="#">Мобильные прил</a>
-                      <a class="dropdown-item" href="#">Контакты</a>
-                    </div>
-                  </li>
-                </ul>
+            <div class="col-md-10">
+              <div class="row">
+                <div class="col m-3 head-sarch-bur">
+                  <form class="form-inline">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Поиск" aria-label="Search">
+                  </form>
+                </div>
+                <div class="col m-2 heaad-social_icons">
+                  <div class="heaad-social">
+                    <a href="#"><img class="social_icons_fb" src="{% static '/images/img/facebook-new.png' %}" alt="#"></a>
+                    <a href="#"><img class="social_icons" src="{% static '/images/img/twiter-blue-icon.png' %}" alt=""></a>
+                    <a href="#"><img class="social_icons" src="{% static '/images/img/vkontakte_PNG11.png' %}" alt=""></a>
+                    <a href="#"><img class="social_icons" src="{% static '/images/img/odnoklassniki_icon.png' %}" alt=""></a>
+                  </div>
+                </div>
+                <div class="col m-2 head-nambers">
+                   <h5>(048) 777-77-77</h5>
+                   <h5>(097) 777-77-77</h5>
+                </div>
               </div>
-            </nav>
+              <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                  <ul class="navbar-nav">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="{% url 'home_page_url' %}">Афиша<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                      <a class="nav-link" href="#">Расписание</a>
+                    </li>
+                    <li class="nav-item active">
+                      <a class="nav-link" href="#">Скоро</a>
+                    </li>
+                    <li class="nav-item active">
+                      <a class="nav-link" href="#">Кинотеатры</a>
+                    </li>
+                    <li class="nav-item active">
+                      <a class="nav-link" href="#">Акции</a>
+                    </li>
+                    <li class="nav-item dropdown active">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        О кинотеатре
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#">Новости</a>
+                        <a class="dropdown-item" href="#">Реклама</a>
+                        <a class="dropdown-item" href="#">Кафе</a>
+                        <a class="dropdown-item" href="#">Мобильные прил</a>
+                        <a class="dropdown-item" href="#">Контакты</a>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+            </div>
           </div>
         </div>
-      </div>
-      {% block content %} 
+        <div class="content">
+          {% block content %} 
          
-      {% endblock %}
+          {% endblock %}
+        </div>
       </main>
       <footer class="footer">
         <hr class="strip">
         <div class="container m-5"> 
           <div class="row">
-            <div class=".col footer-col">
+            <div class="col footer-col">
               <h5>Мобильные приложения</h5>
               <a href="#"><img class="pay_icon_g" src="{% static '/images/img/google-play.png' %}" alt="Google play"></a>
               <a href="#"><img class="pay_icon_a" src="{% static '/images/img/apple-store.png' %}" alt="App Store"></a>
               <p class="footer-company-name">Разработка сайтов: AVADA-MEDIA</p>
             </div>
-            <div class=".col"> 
+            <div class="col"> 
               <ul>
                 <li><a href="#"><h5>Афиша</h5></a></li>
                 <li><a class="footer-text" href="#">Расписание</a></li>
@@ -108,7 +112,7 @@
                 <li><a class="footer-text" href="#">Акции</a></li>
               </ul>
             </div>
-            <div class=".col">               
+            <div class="col">               
               <ul>
                 <li><a href="#"><h5>О кинотеатре</h5></a></li>
                 <li><a class="footer-text" href="#">Новости</a></li>
@@ -117,7 +121,7 @@
                 <li><a class="footer-text" href="#">Контакты</a></li>
               </ul>
             </div>
-            <div class=".col ml-4"> 
+            <div class="col ml-4"> 
               <a href="#"><img class="social_icons_fb" src="{% static '/images/img/facebook-new.png' %}" alt="#"></a>
               <a href="#"><img class="social_icons" src="{% static '/images/img/twiter-blue-icon.png' %}" alt=""></a>
               <a href="#"><img class="social_icons" src="{% static '/images/img/vkontakte_PNG11.png' %}" alt=""></a>
