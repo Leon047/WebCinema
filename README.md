@@ -18,4 +18,4 @@ $ docker-compose build
 $ docker-compose up   
 The project will start.
 
-* http://127.0.0.1:8000/weather_forecast/
+* http://127.0.0.1:8000/
