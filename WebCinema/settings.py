@@ -95,8 +95,8 @@ DATABASES = {
         'NAME': 'webcinema',
         'USER': 'root',
         'PASSWORD': '12345',
-        'HOST': '127.0.0.1',
-        'PORT': 'db',
+        'HOST': 'db',
+        'PORT': '5432',
     }
 }
 
