@@ -36,12 +36,12 @@
             </div>
             <div class="col-md-10">
               <div class="row" style="padding-bottom: 10px;">
-                <div class="col-4 head-sarch-bur">
+                <div class="col-12 col-md-4 head-sarch-bur">
                   <form class="form-inline">
                     <input class="form-control mr-sm-2" type="search" placeholder="Поиск" aria-label="Search">
                   </form>
                 </div>
-                <div class="col-4 heaad-social_icons">
+                <div class="col-12 col-md-4 heaad-social_icons">
                   <div class="heaad-social">
                     <a href="#"><img class="social_icons_fb" src="{% static '/images/img/facebook-new.png' %}" alt="#"></a>
                     <a href="#"><img class="social_icons" src="{% static '/images/img/twiter-blue-icon.png' %}" alt=""></a>
@@ -49,21 +49,21 @@
                     <a href="#"><img class="social_icons" src="{% static '/images/img/odnoklassniki_icon.png' %}" alt=""></a>
                   </div>
                 </div>
-                <div class="col-4 head-nambers">
-                   <h5>(048) 777-77-77</h5>
+                <div class="col-12 col-md-4 head-nambers">
+                   <h5>(049) 777-77-77</h5>
                    <h5>(097) 777-77-77</h5>
                 </div>
               </div>
-              <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                  <ul class="navbar-nav">
-                    <li class="nav-item active">
-                      <a class="nav-link" href="{% url 'home_page_url' %}">Афиша<span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item active">
+	      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+		  <span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+		  <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+		    <li class="nav-item active">
+	              <a class="nav-link" href="{% url 'home_page_url' %}">Афиша<span class="sr-only">(current)</span></a>
+	            </li>
+		    <li class="nav-item active">
                       <a class="nav-link" href="#">Расписание</a>
                     </li>
                     <li class="nav-item active">
@@ -75,7 +75,7 @@
                     <li class="nav-item active">
                       <a class="nav-link" href="#">Акции</a>
                     </li>
-                    <li class="nav-item dropdown active">
+		    <li class="nav-item dropdown active">
                       <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         О кинотеатре
                       </a>
@@ -87,13 +87,12 @@
                         <a class="dropdown-item" href="#">Контакты</a>
                       </div>
                     </li>
-                  </ul>
-                </div>
-              </nav>
+		  </ul>
+		</div>
+	      </nav>
             </div>
           </div>
-        </div>
-        <div class="content">
+        <div class="content" style="margin-top: 20px;">
           {% block content %} 
          
           {% endblock %}
@@ -101,9 +100,9 @@
       </main>
       <footer class="footer">
         <hr class="strip">
-        <div class="container m-5"> 
+        <div class="container p-5"> 
           <div class="row">
-            <div class="col-3 footer-col">
+            <div class="col-12 col-md-3 footer-col">
               <h5>Мобильные приложения</h5>
               <div class="row">
                 <div class="col-6 pay-icon-col">
@@ -115,7 +114,7 @@
               </div>
               <p class="footer-company-name">Разработка сайтов: AVADA-MEDIA</p>
             </div>
-            <div class="col-3"> 
+            <div class="col-12 col-md-3"> 
               <ul>
                 <li><a href="#"><h5>Афиша</h5></a></li>
                 <li><a class="footer-text" href="#">Расписание</a></li>
@@ -124,7 +123,7 @@
                 <li><a class="footer-text" href="#">Акции</a></li>
               </ul>
             </div>
-            <div class="col-3">               
+            <div class="col-12 col-md-3">               
               <ul>
                 <li><a href="#"><h5>О кинотеатре</h5></a></li>
                 <li><a class="footer-text" href="#">Новости</a></li>
@@ -133,7 +132,7 @@
                 <li><a class="footer-text" href="#">Контакты</a></li>
               </ul>
             </div>
-            <div class="col-3"> 
+            <div class="col-12 col-md-3"> 
               <a href="#"><img class="social_icons_fb" src="{% static '/images/img/facebook-new.png' %}" alt="#"></a>
               <a href="#"><img class="social_icons" src="{% static '/images/img/twiter-blue-icon.png' %}" alt=""></a>
               <a href="#"><img class="social_icons" src="{% static '/images/img/vkontakte_PNG11.png' %}" alt=""></a>

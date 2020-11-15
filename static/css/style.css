@@ -34,7 +34,7 @@ body {
 }
 .auth-logout,
 .auth-signup {
-    margin: 5px 70px;    
+    margin: 5px 80px;    
 }
 header{
     background-color: blue;
@@ -48,6 +48,9 @@ footer {
     align-items: flex-end;
     display: flex;
     justify-content: flex-end;
+    @media (max-width: 767px){
+    		justify-content: center;
+    }
 }
 .footer {
     margin-top: auto;
@@ -67,6 +70,21 @@ footer {
     height: 30px;
     outline: 2px solid #000; 
     font-size: 100%;
+}
+@media (max-width: 991px) {
+    .navbar {
+        height: auto;
+	margin-bottom: 20px;
+	}
+}
+@media (max-width: 991px) {
+.auth-logout, .auth-signup, .user-name, .auth-login {
+    position: relative;
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+	}
 }
 .nav-item {
     margin: 0 15px;
@@ -89,6 +107,8 @@ li {
 .pay_icon_a,
 .pay_icon_g {
     width: 100%;
+    max-width: 160px;
+
 }
 .pay_icon_home {
     width: 130px;
@@ -182,4 +202,18 @@ a, a:hover {
     font-size: 15px;
     background-color: #54d734;
     color: white;  
+}
+@media (min-width: 992px){
+constructed stylesheet
+.navbar-expand-lg .navbar-nav {
+    -ms-flex-direction: row;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+	}
+}
+
+/* django-auth */
+.auth {
+  padding: 50px;
 }
